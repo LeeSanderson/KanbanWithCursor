@@ -50,11 +50,11 @@ export function Column({
       role="region"
       aria-label={`${column.title} column`}
       data-testid={`column-${column.id}`}
-      className="flex min-h-[620px] w-[320px] shrink-0 flex-col rounded-[28px] border border-white/80 bg-white/65 p-5 shadow-[0_28px_80px_rgba(3,33,71,0.12)] backdrop-blur"
+      className="flex min-h-[500px] min-w-0 flex-col rounded-[24px] border border-white/80 bg-white/65 p-4 shadow-[0_28px_80px_rgba(3,33,71,0.12)] backdrop-blur sm:min-h-[560px] sm:rounded-[28px] sm:p-5"
     >
       <div className="mb-5 space-y-4">
         <div className="flex items-center justify-between gap-3">
-          <div className="space-y-2">
+          <div className="min-w-0 space-y-2">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--color-blue-primary)]">
               Fixed lane
             </p>
@@ -70,7 +70,7 @@ export function Column({
                 }
               }}
               aria-label={`Rename ${column.id} column`}
-              className="w-full rounded-xl border border-transparent bg-transparent px-2 py-1 text-xl font-semibold text-[color:var(--color-navy)] outline-none transition focus:border-[color:var(--color-blue-primary)] focus:bg-white"
+              className="w-full min-w-0 rounded-xl border border-transparent bg-transparent px-2 py-1 text-lg font-semibold text-[color:var(--color-navy)] outline-none transition focus:border-[color:var(--color-blue-primary)] focus:bg-white sm:text-xl"
             />
           </div>
           <span className="rounded-full bg-[color:var(--color-blue-primary)]/10 px-3 py-1 text-sm font-semibold text-[color:var(--color-blue-primary)]">

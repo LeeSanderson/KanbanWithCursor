@@ -110,23 +110,23 @@ export function Board({ initialBoard }: BoardProps) {
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
     >
-      <div className="mx-auto flex min-h-screen w-full max-w-[1600px] flex-col px-5 py-8 lg:px-8">
-        <header className="rounded-[32px] border border-white/70 bg-white/75 px-6 py-7 shadow-[0_24px_70px_rgba(3,33,71,0.12)] backdrop-blur md:px-8">
+      <div className="mx-auto flex min-h-screen w-full max-w-[1600px] flex-col px-4 py-6 sm:px-5 md:py-8 lg:px-8">
+        <header className="rounded-[28px] border border-white/70 bg-white/75 px-5 py-6 shadow-[0_24px_70px_rgba(3,33,71,0.12)] backdrop-blur sm:px-6 md:rounded-[32px] md:px-8 md:py-7">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div className="max-w-3xl space-y-4">
               <p className="text-sm font-semibold uppercase tracking-[0.32em] text-[color:var(--color-blue-primary)]">
                 Single-board Kanban MVP
               </p>
-              <h1 className="text-4xl font-semibold tracking-tight text-[color:var(--color-navy)] md:text-5xl">
+              <h1 className="text-3xl font-semibold tracking-tight text-[color:var(--color-navy)] sm:text-4xl md:text-5xl">
                 Move work forward with a lightweight board that feels refined from the first click.
               </h1>
-              <p className="max-w-2xl text-base leading-7 text-[color:var(--color-gray-text)] md:text-lg">
+              <p className="max-w-2xl text-sm leading-7 text-[color:var(--color-gray-text)] sm:text-base md:text-lg">
                 Rename any lane, add or delete cards, and drag work across the fixed five-column
                 flow without any persistence overhead.
               </p>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-3">
+            <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
               <div className="rounded-2xl bg-[color:var(--color-navy)] px-4 py-3 text-white shadow-[0_16px_32px_rgba(3,33,71,0.2)]">
                 <p className="text-xs uppercase tracking-[0.24em] text-white/70">Columns</p>
                 <p className="mt-2 text-3xl font-semibold">{board.columnOrder.length}</p>
@@ -147,8 +147,8 @@ export function Board({ initialBoard }: BoardProps) {
           </div>
         </header>
 
-        <main className="mt-8 overflow-x-auto pb-6">
-          <div className="flex min-w-max gap-5">
+        <main className="mt-6 pb-6 sm:mt-8">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5">
             {columns.map(({ column, cards }) => (
               <Column
                 key={column.id}
